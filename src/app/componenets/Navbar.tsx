@@ -6,18 +6,17 @@ export default function Navbar() {
   return (
     <header className='border-border border-b'>
       <div className='flex items-center justify-between h-16 max-w-7xl mx-auto'>
-        <div className='flex items-center space-x-4'>
-          <span className='font-bold'>Token Manager Explorer</span>
-        </div>
-        <nav className='flex items-center space-x-4'>
-          <Link
-            href='/marketplace'
-            className='text-muted-foreground'
-            prefetch={false}
-          >
+        <Link href='/' className='flex items-center space-x-4'>
+          <span className='font-medium'>Token Manager Dashboard</span>
+        </Link>
+        <nav className='flex items-center space-x-12'>
+          <Link href='/marketplace' className='text-md' prefetch={false}>
             Marketplace
           </Link>
-          <Link
+          <Link href='/profile' className='text-md' prefetch={false}>
+            Profile
+          </Link>
+          {/* <Link
             href='/profile'
             className='text-muted-foreground'
             prefetch={false}
@@ -25,7 +24,7 @@ export default function Navbar() {
             <Button variant='ghost' size='icon' className='rounded-full'>
               <UserIcon className='text-orange-500' />
             </Button>
-          </Link>
+          </Link> */}
         </nav>
       </div>
     </header>

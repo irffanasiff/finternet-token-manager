@@ -19,12 +19,14 @@ export default function Component() {
         </Avatar>
         <div>
           <h1 className='text-xl font-semibold'>ABC Bank</h1>
-          <p className='text-muted-foreground text-base'>ABC Bank of People</p>
+          <p className='text-muted-foreground text-base'>
+            id: 8jkum9ko6hujkmwijhu8
+          </p>
         </div>
       </div>
       <div>
         <div className='flex flex-col items-start justify-start gap-8'>
-          <h2 className='text-lg font-semibold'>Deployed Assets</h2>
+          <h2 className='text-lg font-semibold'>Deployed Products</h2>
           <div className='flex flex-row items-start justify-start w-full gap-12 flex-wrap'>
             {data.bankingProducts.map((product: any) => (
               <ProductCard
@@ -45,10 +47,10 @@ export default function Component() {
             <Link href='/marketplace'>
               <div className='h-full min-h-[296px] border border-dashed border-border rounded-lg p-8 text-center flex flex-col items-center justify-center'>
                 <PlusIcon className='w-12 h-12 mx-auto text-muted-foreground' />
-                <h3 className='mt-4 text-xl font-medium'>Add Asset</h3>
+                <h3 className='mt-4 text-xl font-medium'>Add New Products</h3>
                 <p className='mt-2 font-light text-muted-foreground text-center max-w-[320px]'>
-                  Explore products on the marketplace and deploy them for your
-                  customers.
+                  Explore Products from marketplace and deploy them for your
+                  customer
                 </p>
               </div>
             </Link>

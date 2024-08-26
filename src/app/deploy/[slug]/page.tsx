@@ -21,9 +21,9 @@ const DeployProduct = ({ params }: { params: { slug: string } }) => {
     router.push('/profile');
     addBankingProduct({
       id: '1',
-      name: 'Current Account Product',
+      name: 'Savings Account',
       description:
-        'Current account product for your customers, powered by the Finterent.',
+        'Savings account for your customers, powered by the Finterent.',
       icon: 'bank',
       action: {
         buttonText: 'View Details',
@@ -36,10 +36,10 @@ const DeployProduct = ({ params }: { params: { slug: string } }) => {
     <div className='mx-auto max-w-7xl py-16 flex flex-col items-start gap-14'>
       <div className='flex flex-col gap-1 items-start justify-start'>
         <h1 className='text-2xl font-semibold'>
-          Configure Current Account Asset
+          Configure Savings Account Product
         </h1>
         <p className='font-light'>
-          Configure the current account deployment for your users
+          Configure the savings account deployment for your users
         </p>
       </div>
 
@@ -70,7 +70,7 @@ const DeployProduct = ({ params }: { params: { slug: string } }) => {
           </nav>
         </div>
         <div className='pl-8 w-full'>
-          <form className='space-y-6 w-full min-h-[700px]'>
+          <form className='space-y-6 w-full min-h-[600px]'>
             {step === 1 && <BankConfigurations />}
             {step === 2 && <AccountConfigurations />}
             {step === 3 && <VerificationKYC />}
@@ -115,29 +115,29 @@ const BankConfigurations = () => {
     <div className='flex flex-col max-w-[520px] gap-10'>
       <div>
         <Label className='block text-lg font-medium mb-6'>
-          Select Current Account Types*
+          Select Savings Account Types*
         </Label>
         <div className='space-y-3'>
           <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start'>
             <Checkbox className='size-5 ' />
-            Standard Current Account
+            Regular Savings Account
           </div>
           <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start'>
             <Checkbox className='size-5' />
-            Foreign Currency Current Account
+            Basic Savings Account
           </div>
           <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start '>
             <Checkbox className='size-5' />
-            Startup Current Account
+            Salary Based Savings Account
           </div>
-          <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start'>
+          {/* <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start'>
             <Checkbox className='size-5' />
             Merchant Current Account
           </div>
           <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start'>
             <Checkbox className='size-5' />
             Special Current Account
-          </div>
+          </div> */}
         </div>
       </div>
       <div>

@@ -10,6 +10,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const data = [
   {
@@ -146,7 +147,9 @@ export default function TransactionsTableData() {
             <TableRow key={index}>
               <TableCell className='font-medium'>
                 <div className='flex items-center space-x-2'>
-                  <span>{row.txnId}</span>
+                  <Link href={row.txnId}>
+                    <span>{row.txnId}</span>
+                  </Link>
                   <Button
                     variant='ghost'
                     size='icon'

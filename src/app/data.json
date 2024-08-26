@@ -2,8 +2,8 @@
     "bankingProducts": [
         {
             "id": "1",
-            "name": "Current Account Product",
-            "description": "Deploy Current account product for your customers, powered by the Finterent.",
+            "name": "Savings Account",
+            "description": "Deploy Savings account smart contract to offer secure, long-term savings secured by the Finterent",
             "icon": "current_account_icon",
             "action": {
                 "buttonText": "Deploy",
@@ -24,9 +24,20 @@
         },
         {
             "id": "3",
-            "name": "Loan Product",
-            "description": "Deploy a loan products for your customers on the finternet.",
-            "icon": "loan_account_icon",
+            "name": "Current Account Product",
+            "description": "Deploy Current account smart contract, secured by the Finterent",
+            "icon": "fixed_deposit_icon",
+            "action": {
+                "buttonText": "Deploy",
+                "navigateTo": "/deploy/3",
+                "buttonVariant": "default"
+            }
+        },
+        {
+            "id": "3",
+            "name": "Home Loan Account",
+            "description": "Deploy a Home Loan smart contract for your customers on the finternet.",
+            "icon": "home_loan_icon",
             "action": {
                 "buttonText": "Deploy",
                 "navigateTo": "/deploy/3",
@@ -35,9 +46,9 @@
         },
         {
             "id": "4",
-            "name": "Loan Product",
-            "description": "Deploy a loan products for your customers on the finternet.",
-            "icon": "loan_account_icon",
+            "name": "Car Loan Account",
+            "description": "Deploy a Car Loan products for your customers on the finternet.",
+            "icon": "car_loan_icon",
             "action": {
                 "buttonText": "Deploy",
                 "navigateTo": "/deploy/4",
@@ -46,23 +57,12 @@
         },
         {
             "id": "5",
-            "name": "Loan Product",
-            "description": "Deploy a loan products for your customers on the finternet.",
-            "icon": "loan_account_icon",
+            "name": "Business Loan Account",
+            "description": "Deploy a Business loan account for your customers on the finternet.",
+            "icon": "business_loan_account_icon",
             "action": {
                 "buttonText": "Deploy",
                 "navigateTo": "/deploy/5",
-                "buttonVariant": "default"
-            }
-        },
-        {
-            "id": "6",
-            "name": "Loan Product",
-            "description": "Deploy a loan products for your customers on the finternet.",
-            "icon": "loan_account_icon",
-            "action": {
-                "buttonText": "Deploy",
-                "navigateTo": "/deploy/6",
                 "buttonVariant": "default"
             }
         }

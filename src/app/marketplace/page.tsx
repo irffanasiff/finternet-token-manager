@@ -10,18 +10,19 @@ import {
 import { Input } from '@/components/ui/input';
 import productsData from '../data.json';
 import { BankingProduct } from '@/utils/types';
+import { Card, CardHeader } from '@/components/ui/card';
 
 const Marketplace = () => {
   return (
-    <div className='mx-auto max-w-7xl py-24 flex flex-col items-start gap-16'>
-      <div className='flex flex-col gap-2 w-full'>
+    <div className='mx-auto max-w-7xl py-24 flex flex-col items-start gap-12'>
+      <div className='flex flex-col gap-1 w-full'>
         <div className='text-[28px] '>Products Marketplace</div>
         <p className='text-[16px] font-light text-muted-foreground'>
           Select and deploy products for your users. Manage these products
           directly from your dashboard.
         </p>
       </div>
-      <div className='flex items-center justify-between w-full'>
+      <div className='hidden items-center justify-between w-full'>
         <h1 className='text-xl font-medium'>Banking Products</h1>
         <div className='flex items-center space-x-4'>
           <div className='relative'>
@@ -44,6 +45,14 @@ const Marketplace = () => {
           </Select>
         </div>
       </div>
+      <Card className='w-full rounded-lg'>
+        <CardHeader className='py-4 flex flex-row justify-between items-start gap-6'>
+          <div>Products Imported from CBS</div>
+          <p className='underline font-normal text-secondary-foreground'>
+            Learn More
+          </p>
+        </CardHeader>
+      </Card>
       <div className='flex flex-row gap-12 flex-wrap justify-center'>
         {productsData.bankingProducts.map((product: any) => (
           <ProductCard key={product.id} product={product} />
