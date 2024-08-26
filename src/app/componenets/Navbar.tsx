@@ -11,14 +11,14 @@ export default function Navbar() {
         </div>
         <nav className='flex items-center space-x-4'>
           <Link
-            href='marketplace'
+            href='/marketplace'
             className='text-muted-foreground'
             prefetch={false}
           >
             Marketplace
           </Link>
           <Link
-            href='profile'
+            href='/profile'
             className='text-muted-foreground'
             prefetch={false}
           >

@@ -45,7 +45,7 @@ const Marketplace = () => {
         </div>
       </div>
       <div className='flex flex-row gap-12 flex-wrap justify-center'>
-        {productsData.bankingProducts.map((product: BankingProduct) => (
+        {productsData.bankingProducts.map((product: any) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>

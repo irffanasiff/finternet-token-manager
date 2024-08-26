@@ -28,6 +28,7 @@ export default function Component() {
           <div className='flex flex-row items-start justify-start w-full gap-12 flex-wrap'>
             {data.bankingProducts.map((product: any) => (
               <ProductCard
+                key={product.id}
                 product={{
                   id: '1',
                   name: product.name,
