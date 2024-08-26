@@ -1,0 +1,113 @@
+{
+    "bankingProducts": [
+        {
+            "id": "1",
+            "name": "Current Account Product",
+            "description": "Deploy Current account product for your customers, powered by the Finterent.",
+            "icon": "current_account_icon",
+            "action": {
+                "buttonText": "Deploy",
+                "navigateTo": "/deploy/1",
+                "buttonVariant": "default"
+            }
+        },
+        {
+            "id": "2",
+            "name": "Fixed Deposit Account Product",
+            "description": "Deploy fixed deposit products to offer secure, long-term savings secured by the Finterent",
+            "icon": "fixed_deposit_icon",
+            "action": {
+                "buttonText": "Deploy",
+                "navigateTo": "/deploy/2",
+                "buttonVariant": "default"
+            }
+        },
+        {
+            "id": "3",
+            "name": "Loan Product",
+            "description": "Deploy a loan products for your customers on the finternet.",
+            "icon": "loan_account_icon",
+            "action": {
+                "buttonText": "Deploy",
+                "navigateTo": "/deploy/3",
+                "buttonVariant": "default"
+            }
+        },
+        {
+            "id": "4",
+            "name": "Loan Product",
+            "description": "Deploy a loan products for your customers on the finternet.",
+            "icon": "loan_account_icon",
+            "action": {
+                "buttonText": "Deploy",
+                "navigateTo": "/deploy/4",
+                "buttonVariant": "default"
+            }
+        },
+        {
+            "id": "5",
+            "name": "Loan Product",
+            "description": "Deploy a loan products for your customers on the finternet.",
+            "icon": "loan_account_icon",
+            "action": {
+                "buttonText": "Deploy",
+                "navigateTo": "/deploy/5",
+                "buttonVariant": "default"
+            }
+        },
+        {
+            "id": "6",
+            "name": "Loan Product",
+            "description": "Deploy a loan products for your customers on the finternet.",
+            "icon": "loan_account_icon",
+            "action": {
+                "buttonText": "Deploy",
+                "navigateTo": "/deploy/6",
+                "buttonVariant": "default"
+            }
+        }
+    ],
+    "configurations": {
+        "currentAccount": {
+            "types": [
+                {
+                    "id": "standard",
+                    "name": "Standard Current Account",
+                    "selected": true
+                },
+                {
+                    "id": "foreign",
+                    "name": "Foreign Currency Current Account",
+                    "selected": false
+                },
+                {
+                    "id": "startup",
+                    "name": "Startup Current Account",
+                    "selected": false
+                },
+                {
+                    "id": "merchant",
+                    "name": "Merchant Current Account",
+                    "selected": false
+                },
+                {
+                    "id": "special",
+                    "name": "Special Current Account",
+                    "selected": false
+                }
+            ],
+            "interestRate": {
+                "label": "Interest Rate",
+                "value": null
+            },
+            "maximumTransferLimit": {
+                "label": "Maximum Transfer Limit over a year",
+                "value": null
+            },
+            "restrictedJurisdictions": {
+                "label": "Restricted Jurisdictions",
+                "value": null
+            }
+        }
+    }
+}
