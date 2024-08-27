@@ -60,7 +60,7 @@ export default function Component() {
               }}
             />
             <Link href='/marketplace'>
-              <div className='h-full min-h-[296px] border border-dashed border-border rounded-lg p-8 text-center flex flex-col items-center justify-center'>
+              <div className='h-full max-w-[360px] min-h-[296px] border border-dashed border-border rounded-lg p-8 text-center flex flex-col items-center justify-center'>
                 <PlusIcon className='w-12 h-12 mx-auto text-muted-foreground' />
                 <h3 className='mt-4 text-xl font-medium'>Add More Products</h3>
                 <p className='mt-2 font-light text-muted-foreground text-center max-w-[320px]'>

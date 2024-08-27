@@ -2,9 +2,9 @@
     "bankingProducts": [
         {
             "id": "1",
-            "name": "Savings Account",
-            "description": "Deploy Savings account smart contract to offer secure, long-term savings secured by the Finterent",
-            "icon": "current_account_icon",
+            "name": "Current Account Product",
+            "description": "Deploy Current account smart contract, secured by the Finterent",
+            "icon": "fixed_deposit_icon",
             "action": {
                 "buttonText": "Deploy",
                 "navigateTo": "/deploy/1",
@@ -13,9 +13,9 @@
         },
         {
             "id": "2",
-            "name": "Fixed Deposit Account Product",
-            "description": "Deploy fixed deposit products to offer secure, long-term savings secured by the Finterent",
-            "icon": "fixed_deposit_icon",
+            "name": "Savings Account",
+            "description": "Deploy Savings account smart contract to offer secure, long-term savings secured by the Finterent",
+            "icon": "current_account_icon",
             "action": {
                 "buttonText": "Deploy",
                 "navigateTo": "/deploy/2",
@@ -24,8 +24,8 @@
         },
         {
             "id": "3",
-            "name": "Current Account Product",
-            "description": "Deploy Current account smart contract, secured by the Finterent",
+            "name": "Fixed Deposit Account Product",
+            "description": "Deploy fixed deposit products to offer secure, long-term savings secured by the Finterent",
             "icon": "fixed_deposit_icon",
             "action": {
                 "buttonText": "Deploy",

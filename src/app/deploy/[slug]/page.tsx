@@ -21,9 +21,9 @@ const DeployProduct = ({ params }: { params: { slug: string } }) => {
     router.push('/profile');
     addBankingProduct({
       id: '1',
-      name: 'Savings Account',
+      name: 'Current Account',
       description:
-        'Savings account for your customers, powered by the Finterent.',
+        'Current account for your customers, powered by the Finterent.',
       icon: 'bank',
       action: {
         buttonText: 'View Details',
@@ -36,10 +36,10 @@ const DeployProduct = ({ params }: { params: { slug: string } }) => {
     <div className='mx-auto max-w-7xl py-16 flex flex-col items-start gap-14'>
       <div className='flex flex-col gap-1 items-start justify-start'>
         <h1 className='text-2xl font-semibold'>
-          Configure Savings Account Product
+          Configure Current Account Product
         </h1>
         <p className='font-light'>
-          Configure the savings account deployment for your users
+          Configure the current account smart contract for your users
         </p>
       </div>
 
@@ -115,20 +115,20 @@ const BankConfigurations = () => {
     <div className='flex flex-col max-w-[520px] gap-10'>
       <div>
         <Label className='block text-lg font-medium mb-6'>
-          Select Savings Account Types*
+          Select Current Account Types*
         </Label>
         <div className='space-y-3'>
           <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start'>
             <Checkbox className='size-5 ' />
-            Regular Savings Account
+            Regular Current Account
           </div>
           <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start'>
             <Checkbox className='size-5' />
-            Basic Savings Account
+            Business Savings Account
           </div>
           <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start '>
             <Checkbox className='size-5' />
-            Salary Based Savings Account
+            International Savings Account
           </div>
           {/* <div className='px-4 py-3 border border-border rounded-lg flex-row items-center gap-3 flex w-full justify-start'>
             <Checkbox className='size-5' />
@@ -184,6 +184,17 @@ const BankConfigurations = () => {
 const AccountConfigurations = () => {
   return (
     <div className='flex flex-col max-w-[520px] gap-10'>
+      <div>
+        <Label htmlFor='min-amount' className='block text-lg font-medium mb-2'>
+          Select Currency
+        </Label>
+        <Input
+          id='select_currency'
+          value={'₹'}
+          type='text'
+          placeholder='Enter Currency'
+        />
+      </div>
       <div>
         <Label htmlFor='min-amount' className='block text-lg font-medium mb-2'>
           Minimum Amount to Tokenise
