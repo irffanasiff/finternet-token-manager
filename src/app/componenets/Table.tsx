@@ -11,92 +11,13 @@ import {
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-
-const data = [
-  {
-    txnId: '0x1a9f6e8d3b...',
-    finternetId: 'vikram@finternet',
-    action: 'Detokenize',
-    actionType: 'SEND',
-    units: 10.87,
-    time: 'a sec ago',
-    verificationStatus: 'Approved',
-    txnStatus: 'Success',
-  },
-  {
-    txnId: '0x1a9f6e8d3b...',
-    finternetId: 'amit@finternet',
-    action: 'Tokenize',
-    actionType: 'RECEIVE',
-    units: 456.4,
-    time: 'a sec ago',
-    verificationStatus: 'Approved',
-    txnStatus: 'Success',
-  },
-  {
-    txnId: '0x1a9f6e8d3b...',
-    finternetId: 'priya@finternet',
-    action: 'Detokenize',
-    actionType: 'SEND',
-    units: 100000.0,
-    time: 'a sec ago',
-    verificationStatus: 'Pending',
-    txnStatus: 'Pending',
-  },
-  {
-    txnId: '0x1a9f6e8d3b...',
-    finternetId: 'sanjay@finternet',
-    action: 'Tokenize',
-    actionType: 'RECEIVE',
-    units: 34768.34,
-    time: 'a sec ago',
-    verificationStatus: 'Pending',
-    txnStatus: 'Pending',
-  },
-  {
-    txnId: '0x3b5d7f9d6e...',
-    finternetId: 'asha@finternet',
-    action: 'Tokenize',
-    actionType: 'RECEIVE',
-    units: 234.5,
-    time: 'a sec ago',
-    verificationStatus: 'Approved',
-    txnStatus: 'Success',
-  },
-  {
-    txnId: '0x1a9f6e8d3b...',
-    finternetId: 'rajesh@finternet',
-    action: 'Detokenize',
-    actionType: 'WITHDRAW',
-    units: 1000.0,
-    time: '2 sec ago',
-    verificationStatus: 'Approved',
-    txnStatus: 'Success',
-  },
-  {
-    txnId: '0x1a9f6e8d3b...',
-    finternetId: 'meera@finternet',
-    action: 'Tokenize',
-    actionType: 'RECEIVE',
-    units: 1298.12,
-    time: '2 sec ago',
-    verificationStatus: 'Rejected',
-    txnStatus: 'Success',
-  },
-  {
-    txnId: '0x4e3f2d1c7b...',
-    finternetId: 'yash@finternet',
-    action: 'Tokenize',
-    actionType: 'TOPUP',
-    units: 11678.0,
-    time: '2 sec ago',
-    verificationStatus: 'Approved',
-    txnStatus: 'Success',
-  },
-];
+import TableData from '../tabledata.json';
+import { usePathname } from 'next/navigation';
 
 export default function TransactionsTableData() {
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const pathname = usePathname();
+  const data = TableData;
 
   const handleCopy = (id: string) => {
     navigator.clipboard.writeText(id);
@@ -146,25 +67,30 @@ export default function TransactionsTableData() {
           {data.map((row, index) => (
             <TableRow key={index}>
               <TableCell className='font-medium'>
-                <div className='flex items-center space-x-2'>
-                  <Link href={row.txnId}>
-                    <span>{row.txnId}</span>
-                  </Link>
-                  <Button
-                    variant='ghost'
-                    size='icon'
-                    className='h-8 w-8'
-                    onClick={() => handleCopy(row.txnId)}
-                  >
-                    {copiedId === row.txnId ? (
-                      <CopyCheck className='h-4 w-4' />
-                    ) : (
-                      <Copy className='h-4 w-4' />
-                    )}
-                  </Button>
-                </div>
+                <Link href={pathname + '/' + row.txnId} key={index}>
+                  <div className='flex items-center space-x-2'>
+                    <span className='hover:underline'>
+                      {row.txnId.slice(0, 6)}...
+                      {row.txnId.slice(row.txnId.length - 6)}
+                    </span>
+                    <Button
+                      variant='ghost'
+                      size='icon'
+                      className='h-8 w-8'
+                      onClick={() => handleCopy(row.txnId)}
+                    >
+                      {copiedId === row.txnId ? (
+                        <CopyCheck className='h-4 w-4' />
+                      ) : (
+                        <Copy className='h-4 w-4' />
+                      )}
+                    </Button>
+                  </div>
+                </Link>
               </TableCell>
-              <TableCell>{row.finternetId}</TableCell>
+              <TableCell className='text-[#1D68BF]'>
+                {row.finternetId}
+              </TableCell>
               <TableCell>
                 <div className='flex items-center space-x-2'>
                   <span className={getActionStyle(row.action)}>

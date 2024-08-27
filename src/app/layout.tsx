@@ -18,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <div className='w-full'>
-          <Navbar />
-          {children}
+        <div className='py-6 px-12 h-screen'>
+          <div className='w-full h-full border-8 border-black rounded-2xl'>
+            <Navbar />
+            {children}
+          </div>
         </div>
       </body>
     </html>

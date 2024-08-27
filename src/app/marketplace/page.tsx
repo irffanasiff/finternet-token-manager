@@ -14,7 +14,7 @@ import { Card, CardHeader } from '@/components/ui/card';
 
 const Marketplace = () => {
   return (
-    <div className='mx-auto max-w-7xl py-24 flex flex-col items-start gap-12'>
+    <div className='mx-auto max-w-7xl py-24 flex flex-col items-start gap-12 px-12'>
       <div className='flex flex-col gap-1 w-full'>
         <div className='text-[28px] '>Products Marketplace</div>
         <p className='text-[16px] font-light text-muted-foreground'>

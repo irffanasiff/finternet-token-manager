@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 export default function ProductCard({ product }: { product: BankingProduct }) {
   return (
-    <Card className='w-full max-w-[394px] rounded-lg'>
+    <Card className='w-full max-w-[360px] rounded-lg'>
       <CardHeader className='py-8 flex flex-col items-start gap-6'>
         <BanknoteIcon className='w-12 h-12 text-[#FF5722]' />
         <div>

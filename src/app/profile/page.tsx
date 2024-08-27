@@ -1,15 +1,15 @@
 'use client';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import useBankStore from '@/utils/store/useBankStore';
+import useBankStore from '@/state/useBankStore';
 import { JSX, SVGProps } from 'react';
-import ProductCard from '../componenets/ProductCard';
 import Link from 'next/link';
+import ProductCard from '../componenets/ProductCard';
 
 export default function Component() {
   const { data } = useBankStore();
   return (
     <div className='max-w-7xl mx-auto flex flex-col gap-16 py-16'>
-      <div className='flex items-center space-x-4'>
+      <div className='flex items-center space-x-4 px-12'>
         <Avatar className='size-16 bg-[#FE2E64] rounded-md'>
           <AvatarImage
             src='/placeholder-user.jpg'
@@ -24,7 +24,7 @@ export default function Component() {
           </p>
         </div>
       </div>
-      <div>
+      <div className='px-12'>
         <div className='flex flex-col items-start justify-start gap-8'>
           <h2 className='text-lg font-semibold'>Deployed Products</h2>
           <div className='flex flex-row items-start justify-start w-full gap-12 flex-wrap'>
@@ -43,11 +43,26 @@ export default function Component() {
                   },
                 }}
               />
-            ))}
+            ))}{' '}
+            <ProductCard
+              key={'savings_account'}
+              product={{
+                id: '1',
+                name: 'Savings Account',
+                description:
+                  'Manage Savings account smart contract on the dashboard, secured by the Finterent',
+                icon: 'savings_account',
+                action: {
+                  buttonVariant: 'secondary',
+                  buttonText: 'View Details',
+                  navigateTo: '/profile/savings_account',
+                },
+              }}
+            />
             <Link href='/marketplace'>
               <div className='h-full min-h-[296px] border border-dashed border-border rounded-lg p-8 text-center flex flex-col items-center justify-center'>
                 <PlusIcon className='w-12 h-12 mx-auto text-muted-foreground' />
-                <h3 className='mt-4 text-xl font-medium'>Add New Products</h3>
+                <h3 className='mt-4 text-xl font-medium'>Add More Products</h3>
                 <p className='mt-2 font-light text-muted-foreground text-center max-w-[320px]'>
                   Explore Products from marketplace and deploy them for your
                   customer

@@ -11,7 +11,7 @@ import Link from 'next/link';
 export default function Page() {
   return (
     <div className='container mx-auto px-4 py-32 max-w-4xl'>
-      <header className='text-center mb-12'>
+      <header className='text-center mb-12 px-12'>
         <h1 className='text-3xl font-bold mb-4'>
           Welcome to the Token Manager Dashboard
         </h1>
@@ -21,7 +21,7 @@ export default function Page() {
         </p>
       </header>
 
-      <div className='flex items-center justify-center gap-8'>
+      <div className='flex items-center justify-center gap-8 px-12'>
         <Link href='/marketplace'>
           <Card className='flex flex-col items-center text-center p-6'>
             <CardHeader className='flex items-center justify-center pb-2'>
@@ -45,7 +45,7 @@ export default function Page() {
               <div className='w-16 h-16 bg-[#777777]/10 rounded-full flex items-center justify-center mb-4'>
                 <User className='w-8 h-8 text-[#777777]' />
               </div>
-              <CardTitle className='text-2xl'>Current Account</CardTitle>
+              <CardTitle className='text-2xl'>Bank Profile</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription className='text-muted-foreground'>

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
-import useBankStore from '@/utils/store/useBankStore';
+import useBankStore from '@/state/useBankStore';
 import { useRouter } from 'next/navigation';
 
 const DeployProduct = ({ params }: { params: { slug: string } }) => {

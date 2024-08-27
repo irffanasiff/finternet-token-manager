@@ -5,7 +5,7 @@ import { JSX, SVGProps } from 'react';
 export default function Navbar() {
   return (
     <header className='border-border border-b'>
-      <div className='flex items-center justify-between h-16 max-w-7xl mx-auto'>
+      <div className='flex items-center justify-between h-16 px-12 max-w-7xl mx-auto'>
         <Link href='/' className='flex items-center space-x-4'>
           <span className='font-medium'>Token Manager Dashboard</span>
         </Link>
