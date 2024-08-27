@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <div className='py-6 px-12 h-screen'>
-          <div className='w-full h-full border-8 border-black rounded-2xl'>
+          <div className='w-full h-full overflow-scroll border-8 border-black rounded-2xl'>
             <Navbar />
             {children}
           </div>

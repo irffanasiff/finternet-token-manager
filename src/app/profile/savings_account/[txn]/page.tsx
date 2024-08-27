@@ -93,7 +93,7 @@ const ProductDetailsDashboard = ({
         </div>
       </div>
       <div className='flex flex-col gap-4 items-start justify-start w-full'>
-        <h1 className='text-2xl font-medium'>Details</h1>
+        <h1 className='text-2xl font-medium'>Balance Change</h1>
         <Table>
           <TableHeader>
             <TableRow>
@@ -131,6 +131,64 @@ const ProductDetailsDashboard = ({
             )}
           </TableBody>
         </Table>
+      </div>
+      <div className='flex flex-col gap-4 items-start justify-start w-full'>
+        <h1 className='text-2xl font-medium'>Transaction Details</h1>
+        <div className='flex flex-col gap-4 w-full text-sm'>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Transaction id</div>
+            <div>{params.txn}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Verification Status</div>
+            <div>{transaction?.verificationStatus}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Transaction Status</div>
+            <div>{transaction?.txnStatus}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Asset Action</div>
+            <div>{transaction?.action}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>User Action</div>
+            <div>{transaction?.actionType}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Units</div>
+            <div>{transaction?.units}</div>
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-col gap-4 items-start justify-start w-full'>
+        <h1 className='text-2xl font-medium'>Logs</h1>
+        <div className='flex flex-col gap-4 w-full text-sm'>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Transaction id</div>
+            <div>{params.txn}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Verification Status</div>
+            <div>{transaction?.verificationStatus}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Transaction Status</div>
+            <div>{transaction?.txnStatus}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Asset Action</div>
+            <div>{transaction?.action}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>User Action</div>
+            <div>{transaction?.actionType}</div>
+          </div>
+          <div className='rounded-lg flex flex-row justify-between items-center p-4 px-6 bg-card'>
+            <div className='text-muted-foreground'>Units</div>
+            <div>{transaction?.units}</div>
+          </div>
+        </div>
       </div>
     </div>
   );
