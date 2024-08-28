@@ -14,7 +14,7 @@
         {
             "id": "2",
             "name": "Savings Account",
-            "description": "Deploy Savings account smart contract to offer secure, long-term savings secured by the Finterent",
+            "description": "Deploy Savings account smart contract to offer secure, secured by the Finterent",
             "icon": "current_account_icon",
             "action": {
                 "buttonText": "Deploy",

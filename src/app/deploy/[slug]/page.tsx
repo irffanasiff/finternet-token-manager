@@ -33,7 +33,7 @@ const DeployProduct = ({ params }: { params: { slug: string } }) => {
   };
 
   return (
-    <div className='mx-auto max-w-7xl py-16 flex flex-col items-start gap-14'>
+    <div className='mx-auto max-w-7xl py-16 flex flex-col items-start gap-14 px-12'>
       <div className='flex flex-col gap-1 items-start justify-start'>
         <h1 className='text-2xl font-semibold'>
           Configure Current Account Product
@@ -70,7 +70,7 @@ const DeployProduct = ({ params }: { params: { slug: string } }) => {
           </nav>
         </div>
         <div className='pl-8 w-full'>
-          <form className='space-y-6 w-full min-h-[600px]'>
+          <form className='space-y-6 w-full min-h-[480px]'>
             {step === 1 && <BankConfigurations />}
             {step === 2 && <AccountConfigurations />}
             {step === 3 && <VerificationKYC />}
